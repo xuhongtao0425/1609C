@@ -1,0 +1,144 @@
+  HttpClient的依赖:
+
+     android {
+        useLibrary 'org.apache.http.legacy'
+    }
+
+      图片:
+https://juejin.im/entry/59b6419d5188257e82675716
+
+http://www.cnblogs.com/huolongluo/p/5541816.html
+
+
+/////////////////////////////////////////////////////////////////////////////////
+//       广播监测网络权限
+//  ConnectivityManager.CONNECTIVITY_ACTION
+//
+//     图片框架   imageloader的依赖
+// implementation'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+//
+/////////////////////////////////////////////////////////////////////////////////////
+//    频道管理的依赖
+//   implementation 'com.github.andyoom:draggrid:v1.0.1'
+//
+//   //在项目的build.gradle中添加
+//
+//    allprojects {
+//         repositories {
+//           google()
+//           jcenter()
+//		maven {url "https://jitpack.io"}
+//        }
+//   }
+//    <!-- 频道管理权限 -->
+//    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+//        tools:ignore="ProtectedPermissions" />
+//    <!-- 震动权限 -->
+//    <uses-permission android:name="android.permission.VIBRATE" />
+//  在清单文件中
+// <activity android:name="com.andy.library.ChannelActivity"></activity>
+//
+///////////////////////////////////////////////////////////////////////////////////
+
+/       /系统网络设置
+  startActivity(new Intent(android.provider.Settings.ACTION_DATA_ROAMING_SETTINGS));
+
+     ImageLoader的用法总结
+
+https://blog.csdn.net/crazy1235/article/details/70305083
+
+
+     Java 四种线程池的用法分析
+
+https://blog.csdn.net/u011974987/article/details/51027795
+
+
+	Xlistview网址
+http://www.cnblogs.com/bimingcong/p/5175848.html
+///////////////////////////////////////////////////////////////////////////////////////////////
+//
+//   DrawerLayout
+//         http://www.jianshu.com/p/65f268f01dce
+//
+//   android 官方DrawerLayout的介绍和使用
+//       https://www.jianshu.com/p/dfa8885ad142
+//
+//   【安卓开发】DrawerLayout+ToolBar报错：DrawerLayout must be measured with MeasureSpec.EXACTLY.
+//      https://blog.csdn.net/weisubao/article/details/60871641
+//
+//
+//   Android中DrawerLayout实现侧滑菜单效果
+//       https://www.jb51.net/article/126767.htm
+
+
+
+Android学习笔记：
+//   界面设计Material Design的基本使用方法（一）
+
+//    https://blog.csdn.net/lone1ycode/article/details/79370085
+//
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//   Fragment newInstance()  动态方法                            					//
+//												//
+//     https://blog.csdn.net/lebang08/article/details/55669178					//
+//												//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//     ViewPager实现页卡的最新方法--简洁的TabLayout（谷歌支持包）					//
+//            http://blog.csdn.net/pengkv/article/details/46926927/					//
+//													//
+//   Design库-TabLayout属性详解										//
+//       https://www.jianshu.com/p/2b2bb6be83a8								//
+//													//
+//   Android TabLayout 分分钟打造一个滑动标签页								//
+//       https://www.jianshu.com/p/39a66373498c
+
+													//
+//   ViewPager和Fragment结合,利用(HorizontalScrollView)实现指示器与ViewPager同时滑动的动态效果	
+	//
+//      
+https:blog.csdn.net/u012310981/article/details/44811275
+
+													//
+
+//    viewpager+fragment+HorizontalScrollView详细版
+
+
+//       https://www.bbsmax.com/R/gAJGnkkozZ/								//
+
+
+//    
+一个简单好用的ViewPagerIndicator
+
+
+//       https://juejin.im/entry/59b6aef3f265da0646187206
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//      练习接口
+//     https://gank.io/api/data/Android/20/30
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//   视频网址
+//  https://blog.csdn.net/qq1271396448/article/details/79033686
+//   
+//   视频接口
+//  https://www.apiopen.top/satinGodApi?type=1&page=1
+//
+//   视频依赖
+//  implementation 'com.github.bumptech.glide:glide:4.8.0'
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+https://free.modao.cc/app/uYUdzLHGXzPADyUJI6kqGDXq1cuy7RM#screen=s6726998C501507537469427
+
+
+
+
+
+
+
+
+
+
+
