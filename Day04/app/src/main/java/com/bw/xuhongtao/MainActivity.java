@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void logonView(String message, String status) {
         if(status.equals("0000")){
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(MainActivity.this,ShowActivity.class));
+            startActivity(new Intent(MainActivity.this,ZhanshiActivity.class));
             finish();
         }else{
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show();

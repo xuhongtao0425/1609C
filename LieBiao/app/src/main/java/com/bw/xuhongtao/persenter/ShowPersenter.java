@@ -1,11 +1,12 @@
 package com.bw.xuhongtao.persenter;
 
-import com.bw.xuhongtao.MainActivity;
-import com.bw.xuhongtao.R;
 import com.bw.xuhongtao.model.ShowModel;
+import com.bw.xuhongtao.model.bean.Bean;
+import com.bw.xuhongtao.view.ShowView;
 
 import java.lang.ref.Reference;
 import java.lang.ref.WeakReference;
+import java.util.List;
 
 /**
  * @author xuhongtao
@@ -17,10 +18,12 @@ public class ShowPersenter<T> {
     //声明
     private Reference<T> myReference;
     private ShowModel showModel;
+    private final ShowView showView;
 
     //构造方法
-    public ShowPersenter() {
+    public ShowPersenter(ShowView view) {
         showModel = new ShowModel();
+        showView = view;
     }
 
     //管理MainActivity
@@ -32,6 +35,13 @@ public class ShowPersenter<T> {
     public void showPersenter() {
         //调用model层与persenter层关联方法
         showModel.showModel();
+        //接收参数
+        showModel.setOnShowListener(new ShowModel.OnShowListener() {
+            @Override
+            public void getShowData(List<Bean.DataEntity> data) {
+                showView.showView(data);
+            }
+        });
     }
 
     //解决关联

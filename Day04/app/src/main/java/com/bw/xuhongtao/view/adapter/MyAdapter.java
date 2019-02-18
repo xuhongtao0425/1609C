@@ -73,7 +73,7 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             viewHolder1.textView.setText(data.get(i).getTitle());
 
         }
-        if (type == TYPE2) {
+        else if (type == TYPE2) {
             ViewHolder1 viewHolder2 = (ViewHolder1) viewHolder;
             viewHolder2.textView.setText(data.get(i).getTitle());
             Glide.with(context).load(data.get(i).getThumbnail_pic_s()).into(viewHolder2.imageView);
