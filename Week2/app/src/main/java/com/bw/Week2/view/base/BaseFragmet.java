@@ -1,0 +1,32 @@
+package com.bw.Week2.view.base;
+
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+/**
+ * @author xuhongtao
+ * @fileName BaseFragmet
+ * @package com.bw.Week2.view.base
+ * @date 2019/2/22/022 14:53
+ */
+public abstract class BaseFragmet extends Fragment {
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(layoutResID(), container, false);
+        initView(view);
+        initData();
+        return view;
+    }
+
+    protected abstract int layoutResID();
+
+    protected abstract void initView(View view);
+
+    protected abstract void initData();
+}

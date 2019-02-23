@@ -35,8 +35,8 @@ public class ShowPersenter<T> {
         myReference=new WeakReference<T>(view);
     }
 //关联
-    public void showPersenter() {
-        showModel.showModel();
+    public void showPersenter(int page) {
+        showModel.showModel(page);
         showModel.setOnShowListener(new ShowModel.OnShowListener() {
             @Override
             public void getShowData(JSONArray data1) {

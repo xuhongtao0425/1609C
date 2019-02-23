@@ -38,7 +38,7 @@ public class ShowModel {
         this.onShowListener = onShowListener;
     }
 
-    private String url="http://365jia.cn/news/api3/365jia/news/headline?page=1";
+    private String url="http://365jia.cn/news/api3/365jia/news/headline";
     private Handler handler=new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -69,8 +69,8 @@ public class ShowModel {
             }
         }
     };
-    public void showModel() {
-        OkhttpUtils.doGet(url, new Callback() {
+    public void showModel(int page) {
+        OkhttpUtils.doGet(url+"?page="+page, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
 

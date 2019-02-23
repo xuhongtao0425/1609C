@@ -16,6 +16,7 @@ import com.bw.xuhongtao.model.bean.Datas;
 import com.bw.xuhongtao.persenter.ShowPersenter;
 import com.bw.xuhongtao.view.ShowView;
 import com.bw.xuhongtao.view.adapter.MyRlvAdapter;
+import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
 import org.json.JSONArray;
 
@@ -23,8 +24,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements ShowView {
 
-    private RecyclerView rlv;
+    private XRecyclerView rlv;
     private ShowPersenter persenter;
+    private int page=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,19 +38,31 @@ public class MainActivity extends AppCompatActivity implements ShowView {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         //设置布局管理器
         rlv.setLayoutManager(layoutManager);
-        rlv.addItemDecoration(new RecyclerView.ItemDecoration() {
-            @Override
-            public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
-                super.getItemOffsets(outRect, view, parent, state);
-                outRect.set(10, 10, 10, 10);
-            }
-        });
+
         //实例化
         persenter = new ShowPersenter(this);
         //调用yilaiView
         persenter.yilaiView(this);
         //关联
-        persenter.showPersenter();
+        persenter.showPersenter(page);
+        rlv.setLoadingListener(new XRecyclerView.LoadingListener() {
+            //下拉刷新
+            @Override
+            public void onRefresh() {
+                page++;
+                persenter.showPersenter(page);
+                rlv.refreshComplete();
+
+            }
+//上拉加载
+            @Override
+            public void onLoadMore() {
+
+                page=1;
+                persenter.showPersenter(page);
+                rlv.loadMoreComplete();
+            }
+        });
 
     }
 

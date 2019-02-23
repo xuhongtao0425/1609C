@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.bw.xuhongtao.R;
 import com.bw.xuhongtao.model.bean.Datas;
+import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -25,7 +26,7 @@ import java.util.ArrayList;
  * @package com.bw.xuhongtao.view.activity
  * @date 2019/2/18/018 9:44
  */
-public class MyRlvAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class MyRlvAdapter extends XRecyclerView.Adapter<XRecyclerView.ViewHolder> {
     Context context;
     JSONArray data1;
     private static final int TYPE = 0;
@@ -52,7 +53,7 @@ public class MyRlvAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public XRecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         if (i == TYPE1) {
             View view = View.inflate(context, R.layout.item1, null);
             ViewHolder viewHolder = new ViewHolder(view);
@@ -65,7 +66,7 @@ public class MyRlvAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(@NonNull XRecyclerView.ViewHolder viewHolder, final int i) {
         try {
             if (viewHolder instanceof ViewHolder1) {
 
@@ -109,7 +110,7 @@ public class MyRlvAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         return data1.length();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends XRecyclerView.ViewHolder {
         private TextView textView;
         private ImageView imageView;
 
@@ -120,7 +121,7 @@ public class MyRlvAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         }
     }
 
-    class ViewHolder1 extends RecyclerView.ViewHolder {
+    class ViewHolder1 extends XRecyclerView.ViewHolder {
         private TextView textView;
         private ImageView imageView;
 

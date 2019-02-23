@@ -13,5 +13,6 @@ import java.util.ArrayList;
  * @date 2019/2/18/018 9:41
  */
 public interface ShowView {
+
     void ShowView(JSONArray data1);
 }

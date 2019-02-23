@@ -10,6 +10,7 @@ import android.util.Log;
 
 import com.nostra13.universalimageloader.utils.L;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -34,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
 //                    Log.i("xxx",json);
                     try {
                         JSONObject jsonObject=new JSONObject(json);
-
+                        JSONObject data = jsonObject.getJSONObject("data");
+                        JSONArray data1 = data.getJSONArray("data");
+                        final MyRlvAdapter adapter = new MyRlvAdapter(MainActivity.this, data1);
+                        rlv.setAdapter(adapter);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
