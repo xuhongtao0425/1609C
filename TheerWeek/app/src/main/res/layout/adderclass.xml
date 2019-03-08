@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="+"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/num"
+        android:layout_width="50dp"
+        android:text="1"
+        android:layout_height="wrap_content"
+
+        android:layout_toRightOf="@+id/add" />
+
+    <Button
+        android:id="@+id/del"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/num"
+        android:gravity="center"
+        android:text="-"
+        android:textSize="12sp" />
+</RelativeLayout>

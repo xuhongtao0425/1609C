@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--app:childSpacing="auto"-->
+<com.nex3z.flowlayout.FlowLayout
+    android:id="@+id/flowLayout"
+    app:childSpacing="auto"
+    app:childSpacingForLastRow="align"
+    app:rowSpacing="8dp"
+    app:rtl="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"></com.nex3z.flowlayout.FlowLayout>
+
+
+
+</LinearLayout>
